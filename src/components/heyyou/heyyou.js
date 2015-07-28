@@ -7,23 +7,7 @@ angular.module('heyyou').provider('HeyyouRouting', function HeyyouRoutingProvide
     });
 
     function $get(){
-        function HeyyouRouteManager(base_state){
-            this.prefix = base_state ? base_state + '.' : '';
-        }
-
-        angular.extend(HeyyouRouteManager.prototype, {
-            get_state: get_state,
-        });
-
-        function get_state(s){
-            return this.prefix + s;
-        }
-
-        return {
-            create_route_manager: function(base_state){
-                return new HeyyouRouteManager(base_state);
-            }
-        };
+        return 'whatever';
     }
 
     function config_routes(base_state){
@@ -38,18 +22,15 @@ angular.module('heyyou').provider('HeyyouRouting', function HeyyouRoutingProvide
         });
     }
 
+    return this;
 });
 
 angular.module('heyyou').directive('heyyou', function(){
     return {
         restrict: 'E',
         replace: true,
-        scope: {
-            baseState: '@',
-        },
         templateUrl: FS.BASE_URL+'components/heyyou/heyyou.html',
-        controller: function($scope, HeyyouRouting){
-            $scope.routes = HeyyouRouting.create_route_manager($scope.baseState);
+        controller: function($scope){
         }
     };
 });
@@ -58,9 +39,6 @@ angular.module('heyyou').directive('goodday', function(){
     return {
         restrict: 'E',
         replace: true,
-        scope: {
-            baseState: '@',
-        },
         templateUrl: FS.BASE_URL+'components/heyyou/goodday.html',
         controller: function($scope){
         }

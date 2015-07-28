@@ -36,6 +36,7 @@
 	        .state('sponsor', {url: '/sponsor', template: '<fssponsor></fssponsor>', controller: 'SponsorStateCtrl'})
 	        .state('viewuser', {url: '/user/:login', template: '<fsviewuser></fsviewuser>', controller: 'ViewUserStateCtrl'})
 	        .state('editprofile', {url: '/editprofile', template: '<fseditprofile></fseditprofile>'});
+
 			HeyyouRoutingProvider.config_routes('listprojects');
 			HeyyouRoutingProvider.config_routes('viewuser');
 	});
