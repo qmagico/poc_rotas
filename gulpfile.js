@@ -68,7 +68,7 @@ var docs = {
     html: [
         './docs_src/**/*.html',
     ]
-}
+};
 
 var lib = {
     js: [
@@ -79,6 +79,7 @@ var lib = {
         './lib/angular-1.4.0/angular-cookies.js',
         './lib/angular-material-0.9.8/angular-material.js',
         './lib/angular-ui-router-0.2.15/angular-ui-router.js',
+        './lib/angular-ui-router.stateHelper/statehelper.js',
     ],
     jsmin: [
         './lib/jquery/jquery.min.js',
@@ -88,10 +89,11 @@ var lib = {
         './lib/angular-1.4.0/angular-cookies.min.js',
         './lib/angular-material-0.9.8/angular-material.min.js',
         './lib/angular-ui-router-0.2.15/angular-ui-router.min.js',
+        './lib/angular-ui-router.stateHelper/statehelper.min.js',
     ],
     css: ['./lib/angular-material-0.9.8/angular-material.css'],
     cssmin: ['./lib/angular-material-0.9.8/angular-material.min.css'],
-}
+};
 
 var testlib = {
     js: [
